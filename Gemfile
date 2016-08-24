@@ -1,12 +1,14 @@
 source 'http://rubygems.org'
 
+ruby '2.2.4'
+
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -47,11 +49,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-group :development do
-gem 'sqlite3'
-end
-
 group :production do
 gem 'pg'
 gem 'rails_12factor'
+end
+
+group :development do
+gem 'sqlite3'
 end
